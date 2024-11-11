@@ -2,11 +2,12 @@
 
 int func(int arr[], int target, int len) {
 	int i = 0, j = len - 1, m = (i + j) / 2;
-	while (i < j)
+	while (i <= j)
 	{
+		//=因为当 i= m = j 的时候有可能正好是目标值
 		if (arr[m] == target)
 		{
-			return 1;
+			return m;
 		}
 		if (arr[m] > target)
 		{
