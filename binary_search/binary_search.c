@@ -1,7 +1,7 @@
 #include "stdio.h"
 
 int func(int arr[], int target, int len) {
-	int i = 0, j = len - 1, m = (i + j) / 2;
+	int i = 0, j = len - 1, m = (i + j) >>1;
 	while (i <= j)
 	{
 		//=因为当 i= m = j 的时候有可能正好是目标值
@@ -9,7 +9,7 @@ int func(int arr[], int target, int len) {
 		{
 			return m;
 		}
-		if (arr[m] > target)
+		if (target <arr[m])
 		{
 			// 1(i)  3  6(m)  9  11(j)
 			j = m - 1;
